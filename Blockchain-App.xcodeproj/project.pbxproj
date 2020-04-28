@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		D14AACD42458895C00F59220 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D14AACD32458895C00F59220 /* main.cpp */; };
+		D14AACDE245889DB00F59220 /* blockchain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D14AACDC245889DB00F59220 /* blockchain.cpp */; };
+		D14AACE1245889F200F59220 /* block.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D14AACDF245889F200F59220 /* block.cpp */; };
+		D14AACE524588A1000F59220 /* inout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D14AACE324588A1000F59220 /* inout.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,12 @@
 /* Begin PBXFileReference section */
 		D14AACD02458895C00F59220 /* Blockchain-App */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Blockchain-App"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D14AACD32458895C00F59220 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		D14AACDC245889DB00F59220 /* blockchain.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = blockchain.cpp; sourceTree = "<group>"; };
+		D14AACDD245889DB00F59220 /* blockchain.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = blockchain.hpp; sourceTree = "<group>"; };
+		D14AACDF245889F200F59220 /* block.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = block.cpp; sourceTree = "<group>"; };
+		D14AACE0245889F200F59220 /* block.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = block.hpp; sourceTree = "<group>"; };
+		D14AACE324588A1000F59220 /* inout.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = inout.cpp; sourceTree = "<group>"; };
+		D14AACE424588A1000F59220 /* inout.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = inout.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +66,31 @@
 		D14AACD22458895C00F59220 /* Blockchain-App */ = {
 			isa = PBXGroup;
 			children = (
+				D14AACE2245889FC00F59220 /* InOut */,
+				D14AACDB2458899B00F59220 /* Blockchain */,
 				D14AACD32458895C00F59220 /* main.cpp */,
 			);
 			path = "Blockchain-App";
+			sourceTree = "<group>";
+		};
+		D14AACDB2458899B00F59220 /* Blockchain */ = {
+			isa = PBXGroup;
+			children = (
+				D14AACDC245889DB00F59220 /* blockchain.cpp */,
+				D14AACDD245889DB00F59220 /* blockchain.hpp */,
+				D14AACDF245889F200F59220 /* block.cpp */,
+				D14AACE0245889F200F59220 /* block.hpp */,
+			);
+			path = Blockchain;
+			sourceTree = "<group>";
+		};
+		D14AACE2245889FC00F59220 /* InOut */ = {
+			isa = PBXGroup;
+			children = (
+				D14AACE324588A1000F59220 /* inout.cpp */,
+				D14AACE424588A1000F59220 /* inout.hpp */,
+			);
+			path = InOut;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +151,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D14AACD42458895C00F59220 /* main.cpp in Sources */,
+				D14AACE524588A1000F59220 /* inout.cpp in Sources */,
+				D14AACDE245889DB00F59220 /* blockchain.cpp in Sources */,
+				D14AACE1245889F200F59220 /* block.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
