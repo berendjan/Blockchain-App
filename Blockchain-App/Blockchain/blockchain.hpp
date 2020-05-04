@@ -10,16 +10,31 @@
 #define blockchain_hpp
 
 #include <stdio.h>
+#include "block.hpp"
 
 class Blockchain {
     private:
+    
+    int difficulty;
+    double miningReward;
+    
     protected:
     public:
+    
+    vector<Block> blockchain;
+    vector<Transaction> pendingTransactions;
 
     Blockchain();
     ~Blockchain();
 
-    void foo();
+    Block createGenesisBlock();
+    Block getLatestBlock();
+    void minePendingTransactions(string miningRewardAddress);
+    bool isChainValid();
+    void pushToPendingTransactions(Transaction t);
+    double getBalanceOfAddress(string address);
+    
+    unsigned long getCurrentUTCTime();
 };
 
 #endif /* blockchain_hpp */

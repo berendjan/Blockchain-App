@@ -11,6 +11,9 @@
 		D14AACDE245889DB00F59220 /* blockchain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D14AACDC245889DB00F59220 /* blockchain.cpp */; };
 		D14AACE1245889F200F59220 /* block.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D14AACDF245889F200F59220 /* block.cpp */; };
 		D14AACE524588A1000F59220 /* inout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D14AACE324588A1000F59220 /* inout.cpp */; };
+		D14AACF02459B0DD00F59220 /* keygenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D14AACEE2459B0DD00F59220 /* keygenerator.cpp */; };
+		D14AACFF245B7FEF00F59220 /* transaction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D14AACFD245B7FEF00F59220 /* transaction.cpp */; };
+		D14AAD04245D920500F59220 /* openssl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D14AAD02245D920500F59220 /* openssl.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +37,15 @@
 		D14AACE0245889F200F59220 /* block.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = block.hpp; sourceTree = "<group>"; };
 		D14AACE324588A1000F59220 /* inout.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = inout.cpp; sourceTree = "<group>"; };
 		D14AACE424588A1000F59220 /* inout.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = inout.hpp; sourceTree = "<group>"; };
+		D14AACEE2459B0DD00F59220 /* keygenerator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = keygenerator.cpp; sourceTree = "<group>"; };
+		D14AACEF2459B0DD00F59220 /* keygenerator.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = keygenerator.hpp; sourceTree = "<group>"; };
+		D14AACFB245A224500F59220 /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; path = include; sourceTree = "<group>"; };
+		D14AACFC245A224500F59220 /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = lib; sourceTree = "<group>"; };
+		D14AACFD245B7FEF00F59220 /* transaction.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = transaction.cpp; sourceTree = "<group>"; };
+		D14AACFE245B7FEF00F59220 /* transaction.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = transaction.hpp; sourceTree = "<group>"; };
+		D14AAD01245C959600F59220 /* keys */ = {isa = PBXFileReference; lastKnownFileType = text; path = keys; sourceTree = "<group>"; };
+		D14AAD02245D920500F59220 /* openssl.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = openssl.cpp; sourceTree = "<group>"; };
+		D14AAD03245D920500F59220 /* openssl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = openssl.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +78,8 @@
 		D14AACD22458895C00F59220 /* Blockchain-App */ = {
 			isa = PBXGroup;
 			children = (
+				D14AACF8245A211C00F59220 /* OpenSSL */,
+				D14AACED2459B0C000F59220 /* KeyGenerator */,
 				D14AACE2245889FC00F59220 /* InOut */,
 				D14AACDB2458899B00F59220 /* Blockchain */,
 				D14AACD32458895C00F59220 /* main.cpp */,
@@ -80,6 +94,10 @@
 				D14AACDD245889DB00F59220 /* blockchain.hpp */,
 				D14AACDF245889F200F59220 /* block.cpp */,
 				D14AACE0245889F200F59220 /* block.hpp */,
+				D14AACFD245B7FEF00F59220 /* transaction.cpp */,
+				D14AACFE245B7FEF00F59220 /* transaction.hpp */,
+				D14AAD02245D920500F59220 /* openssl.cpp */,
+				D14AAD03245D920500F59220 /* openssl.hpp */,
 			);
 			path = Blockchain;
 			sourceTree = "<group>";
@@ -91,6 +109,25 @@
 				D14AACE424588A1000F59220 /* inout.hpp */,
 			);
 			path = InOut;
+			sourceTree = "<group>";
+		};
+		D14AACED2459B0C000F59220 /* KeyGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				D14AACEE2459B0DD00F59220 /* keygenerator.cpp */,
+				D14AACEF2459B0DD00F59220 /* keygenerator.hpp */,
+				D14AAD01245C959600F59220 /* keys */,
+			);
+			path = KeyGenerator;
+			sourceTree = "<group>";
+		};
+		D14AACF8245A211C00F59220 /* OpenSSL */ = {
+			isa = PBXGroup;
+			children = (
+				D14AACFB245A224500F59220 /* include */,
+				D14AACFC245A224500F59220 /* lib */,
+			);
+			path = OpenSSL;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,10 +187,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D14AACFF245B7FEF00F59220 /* transaction.cpp in Sources */,
 				D14AACD42458895C00F59220 /* main.cpp in Sources */,
-				D14AACE524588A1000F59220 /* inout.cpp in Sources */,
+				D14AAD04245D920500F59220 /* openssl.cpp in Sources */,
 				D14AACDE245889DB00F59220 /* blockchain.cpp in Sources */,
+				D14AACE524588A1000F59220 /* inout.cpp in Sources */,
 				D14AACE1245889F200F59220 /* block.cpp in Sources */,
+				D14AACF02459B0DD00F59220 /* keygenerator.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +315,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4DUKV95NFS;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = "./Blockchain-App/OpenSSL/include/**";
+				LIBRARY_SEARCH_PATHS = "./Blockchain-App/OpenSSL/lib/**";
+				OTHER_LDFLAGS = "-lcrypto";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -285,6 +328,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4DUKV95NFS;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = "./Blockchain-App/OpenSSL/include/**";
+				LIBRARY_SEARCH_PATHS = "./Blockchain-App/OpenSSL/lib/**";
+				OTHER_LDFLAGS = "-lcrypto";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

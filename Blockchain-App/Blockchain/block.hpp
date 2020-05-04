@@ -10,34 +10,45 @@
 #define block_hpp
 
 #include <stdio.h>
-#include <vector>
-#include <string>
+#include <iomanip>
+#include <sstream>
 
-using namespace std;
+#include "transaction.hpp"
+
+using std::string;
+using std::vector;
+using std::cout;
+using std::endl;
+using std::to_string;
 
 class Block {
 
 
     private:
 
-    string previousHash;
-    string transactions;
-    string timestamp;
-    int index;
-
     protected:
 
     public:
+    
+    int index;
+    unsigned long timestamp;
+    vector<Transaction> transactions;
+    string hash;
+    string previousHash;
+    int nonce;
 
-    // Constructors
-    Block();
-    Block(int index, string timestamp, string transactions, string previousHash);
-    // Deconstructor
+    Block(int index, unsigned long timestamp, vector<Transaction> transactions, string previousHash);
     ~Block();
 
-    void calculateHash();
-    void mineBlock();
-
+    string calculateHash();
+    void mineBlock(int difficulty);
+    
+    string stringifyTransactions();
+    
+    string stdHash(string str);
+    
+    
+    bool hasValidTransaction();
 };
 
 #endif /* block_hpp */
